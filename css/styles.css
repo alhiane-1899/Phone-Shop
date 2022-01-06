@@ -391,6 +391,12 @@ svg {
     background-color: var(--secondary-clr);
     border-radius: 5px;
 }
+.collection-col:first-of-type .collection-img img {
+    width: 100%;
+}
+.collection-col:last-of-type .collection-img img {
+    width: 80%;
+}
 .collection-img {
     flex: 0 0 30%;
 }
@@ -421,3 +427,152 @@ svg {
     color: #2b1f4d;
 }
 /* end product collection */
+/* start product category */
+.product-category {
+    padding: 0 0 5rem;
+}
+.tab-controls {
+    padding: 15px 0;
+    background-color: var(--secondary-clr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.tab-controls .control {
+    margin: 0 15px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.cntrl-btn {
+    position: relative;
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background-color: #A5A5A5;
+}
+input#all:checked ~ .tab-controls .all .cntrl-btn,
+input#trending-products:checked ~ .tab-controls .trending-products .cntrl-btn,
+input#special-products:checked ~ .tab-controls .special-products .cntrl-btn,
+input#featured-products:checked ~ .tab-controls .featured-products .cntrl-btn {
+    background-color: var(--black-clr);
+}
+.cntrl-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #A5A5A5;
+}
+input#all:checked ~ .tab-controls .all .cntrl-btn::before,
+input#trending-products:checked ~ .tab-controls .trending-products .cntrl-btn::before,
+input#special-products:checked ~ .tab-controls .special-products .cntrl-btn::before,
+input#featured-products:checked ~ .tab-controls .featured-products .cntrl-btn::before {
+    border-color: var(--black-clr);
+}
+.cntrl-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A5A5A5;
+}
+input#all:checked ~ .tab-controls .all .cntrl-text,
+input#trending-products:checked ~ .tab-controls .trending-products .cntrl-text,
+input#special-products:checked ~ .tab-controls .special-products .cntrl-text,
+input#featured-products:checked ~ .tab-controls .featured-products .cntrl-text {
+    color: var(--black-clr);
+}
+.tab-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+}
+.tab-list .col {
+    display: none;
+}
+.product {
+    text-align: center;
+}
+.product-header {
+    position: relative;
+    height: 15rem;
+    margin-bottom: 25px;
+}
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+.product-header ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    padding: 8px 5px;
+    background-color: var(--secondary-clr);
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+}
+.product:hover .product-header ul {
+    transform: translate(-50%, -50%) scale(1);
+}
+.product-header ul li {
+    margin: 0 5px;
+}
+.product-header ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-clr);
+}
+.product-header ul li a:hover {
+    background-color: var(--black-clr);
+}
+.product-name {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.stars li {
+    display: inline-block;
+    color: #FDCC01;
+}
+.product-price {
+    display: block;
+    margin: 15px 0 18px;
+    font-size: 1.25rem;
+}
+.addtocart-btn {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid var(--black-clr);
+    background-color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.addtocart-btn:hover {
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+}
+input#all:checked ~ .tab-list .col,
+input#trending-products:checked ~ .tab-list [data-value="trending-products"],
+input#special-products:checked ~ .tab-list [data-value="special-products"],
+input#featured-products:checked ~ .tab-list [data-value="featured-products"] {
+    display: block;
+}
+/* end product category */
