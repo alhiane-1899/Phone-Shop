@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* start basic rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s ease-in-out;
+    font-family: "Archivo", sans-serif;
+}
+:root {
+    --primary-clr: #eb0028;
+    --black-clr: #222222;
+    --white-clr: #ffffff;
+    --text-clr: #555555;
+}
+::selection {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+}
+/* end basic rules */
