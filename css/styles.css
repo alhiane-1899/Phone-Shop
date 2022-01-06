@@ -364,3 +364,60 @@ svg {
     }
 }
 /* end hero area */
+/* start product collection */
+.product-collection {
+    padding: 5rem 0;
+}
+.collection-grid {
+    margin: 0 -15px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 30px;
+}
+.collection-col {
+    padding: 0 15px;
+    grid-column: span 12;
+}
+@media screen and (min-width: 992px) {
+    .collection-col {
+        grid-column: span 6;
+    }
+}
+.collection-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--secondary-clr);
+    border-radius: 5px;
+}
+.collection-img {
+    flex: 0 0 30%;
+}
+.collection-text {
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+}
+.collection-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 10px 0 18px;
+}
+.collection-text .btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background-color: #2b1f4d;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-clr);
+}
+.collection-text .btn:hover {
+    background-color: transparent;
+    border-color: #2b1f4d;
+    color: #2b1f4d;
+}
+/* end product collection */
