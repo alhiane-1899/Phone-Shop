@@ -10,6 +10,7 @@
 }
 :root {
     --primary-clr: #eb0028;
+    --secondary-clr: #F1F1F1;
     --black-clr: #222222;
     --white-clr: #ffffff;
     --text-clr: #555555;
@@ -30,6 +31,7 @@ ul {
     list-style-type: none;
 }
 p {
+    font-weight: 500;
     line-height: 1.7;
     color: var(--text-clr);
 }
@@ -68,7 +70,7 @@ img {
         width: 1140px;
     }
 }
-.heading-input {
+.hide-input {
     display: none;
 }
 /* end basic rules */
@@ -84,6 +86,7 @@ svg {
     width: 100%;
     z-index: 9999;
     padding: 21px;
+    background-color: var(--white-clr);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 .header-row {
@@ -103,7 +106,7 @@ svg {
     letter-spacing: 1px;
     color: var(--black-clr);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     nav {
         position: absolute;
         top: 0;
@@ -209,3 +212,155 @@ svg {
     fill: var(--black-clr);
 }
 /* end header */
+/* start hero area */
+.hero-area {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 75px;
+    padding: 0 0 5rem 0;
+    display: grid;
+    place-content: center;
+    background-color: var(--secondary-clr);
+}
+@media screen and (max-width: 576px) {
+    .hero-area {
+        min-height: calc(100vh - 75px)
+    }
+}
+.hero-slider {
+    width: 100%;
+    overflow: hidden;
+}
+.hero-slider .slides {
+    width: 200%;
+    display: flex;
+    transition: margin-left .8s ease-in-out;
+}
+.hero-slider .slides .slide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 992px) {
+    .hero-slider .slides .slide {
+        flex-direction: row;
+    }
+    .text-slide,
+    .img-slide {
+        flex: 0 0 50%;
+    }
+}
+.img-slide {
+    display: flex;
+    width: 55%;
+    margin: 4rem auto 0;
+}
+@media screen and (max-width: 576px) {
+    .img-slide {
+        width: 100%;
+        display: none;
+        margin-top: 0;
+    }
+}
+.text-slide {
+    text-align: center;
+}
+@media screen and (min-width: 992px) {
+    .text-slide {
+        text-align: left;
+    }
+}
+.text-slide h4 {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+.text-slide h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    margin: 15px 0 8px 0;
+}
+.text-slide .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 15px;
+    background-color: var(--black-clr);
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--white-clr);
+}
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 50rem;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 576px) {
+    .slider-controls {
+        display: none;
+    }
+}
+.slider-controls label {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #959595;
+    cursor: pointer;
+}
+.slider-controls label:hover {
+    background-color: var(--black-clr);
+}
+.slider-controls label svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--white-clr);
+}
+#left-input:checked ~ .slides {
+    margin-left: 0;
+}
+#right-input:checked ~ .slides {
+    margin-left: -100%;
+}
+.bullets {
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    .bullets {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bullets label {
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #959595;
+    }
+    .bullets label:hover {
+        background-color: var(--black-clr);
+    }
+    #left-bullet:checked ~ .slides {
+        margin-left: 0;
+    }
+    #right-bullet:checked ~ .slides {
+        margin-left: -100%;
+    }
+}
+/* end hero area */
