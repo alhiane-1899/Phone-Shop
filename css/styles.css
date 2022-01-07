@@ -708,3 +708,79 @@ input#rright-bullet:checked ~ .testimonial-slider .slides .slide:last-child {
     opacity: 1;
 }
 /* end testimonials */
+/* start blog */
+.blog {
+    padding: 5rem 0;
+}
+.heading {
+    padding: 20px 0;
+    background-color: var(--secondary-clr);
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.heading h2 {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--black-clr);
+}
+.heading span {
+    position: relative;
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    background-color: var(--black-clr);
+}
+.heading span::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--black-clr);
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+}
+.blog-cart {
+    background-color: #F1F1F1;
+}
+.cart-header {
+    display: flex;
+}
+.cart-bldy {
+    padding: 1.5rem 1.25rem;
+}
+.blog-title {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+.cart-bldy span {
+    display: block;
+    margin-bottom: 10px;
+}
+.cart-bldy .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 15px;
+    background-color: var(--black-clr);
+    border: 2px solid transparent;
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white-clr);
+}
+.cart-bldy .btn:hover {
+    background-color: transparent;
+    color: var(--black-clr);
+    border-color: var(--black-clr);
+}
+/* end blog */
