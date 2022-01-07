@@ -784,3 +784,70 @@ input#rright-bullet:checked ~ .testimonial-slider .slides .slide:last-child {
     border-color: var(--black-clr);
 }
 /* end blog */
+/* start newsletter */
+.newsletter {
+    padding: 0 0 5rem;
+
+}
+.newsletter-row {
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 992px) {
+    .newsletter-row {
+        flex-direction: column;
+    }
+}
+.newsletter-text,
+.newsletter-form {
+    flex: 0 0 50%;
+    width: 100%;
+}
+@media screen and (max-width: 992px) {
+    .newsletter-text {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+.newsletter-text h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.newsletter-form input {
+    display: inline-block;
+    padding: 14px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+    .newsletter-form input {
+        display: block;
+    }
+}
+.newsletter-form input[type='email'] {
+    width: calc(100% - 150px);
+    background-color: #eee;
+}
+@media screen and (max-width: 768px) {
+    .newsletter-form input[type='email'] {
+        width: 100%;
+    }
+}
+.newsletter-form input[type='submit'] {
+    width: 150px;
+    margin-left: -.5rem;
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .newsletter-form input[type='submit'] {
+        margin: 15px auto 0;
+    }
+}
+.newsletter-form input[type='submit']:hover {
+    opacity: .8;
+}
+/* end newsletter */
